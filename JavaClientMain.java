@@ -6,6 +6,10 @@ import java.nio.Buffer;
 import java.util.Scanner;
 
 public class Main {
+
+    public static final int PORT = 6013;
+    public static final String HOST = "127.0.0.1";
+
     public static void main(String[] args) {
         Socket socket = null;
         InputStream in = null;
@@ -14,7 +18,7 @@ public class Main {
         PrintWriter writer = null;
         BufferedReader stdin = null;
         try{
-            socket = new Socket("127.0.0.1",6013);
+            socket = new Socket(HOST,PORT);
 
             in = socket.getInputStream();
             out = socket.getOutputStream();
